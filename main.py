@@ -44,6 +44,7 @@ def main():
         cached_ip = ""
     if cached_ip == local_ip:
         print(f"[NO CHANGE] Local IP has NOT changed: {local_ip}", file=sys.stderr)
+        print(local_ip)
         sys.exit(0)
     else:
         write_cached_ip(local_ip)

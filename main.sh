@@ -54,6 +54,7 @@ main () {
   fi
   if [[ "$local_ip" == "$cached_ip" ]]; then
     log "[NO CHANGE] Local IP has NOT changed: ${local_ip}"
+    printf '%s\n' "${local_ip}"
     exit 0
   else
     write_cached_ip "$local_ip"
